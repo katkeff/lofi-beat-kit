@@ -40,12 +40,7 @@ const drums = new Howl({
 /* the event.preventDefault function references the last two lines of code. it disables 'click' for touchscreen to avoid a 
 delay in sound and defaults to touchstart while still enabling click on a computer. */
 
-// the setViewportHeight function is to allow the pads to resize with the window on a computer while also staying troe to screen size on a tablet or phone
-
-
 // Finally, we use an addEventListener to trigger the playDrum function. This is what enables the pads to respond to click or touch
-
-
 
 const drumKit = document.querySelector('.drumkit');
 let pad = document.querySelectorAll('.pad');
@@ -60,17 +55,7 @@ function playDrum(event) {
       event.target.classList.remove('playing'); 
     },90);
   }
-
 }
-
-function setViewportHeight() {
-   let vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty('--vh', `${vh}px`);
-}
-
-setViewportHeight();
-
-window.addEventListener('resize', setViewportHeight);
 
 drumKit.addEventListener('click', playDrum);
 drumKit.addEventListener('touchstart', playDrum);

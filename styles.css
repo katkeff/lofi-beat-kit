@@ -1,13 +1,41 @@
 body {
-    background: #353535
+	background: linear-gradient(-45deg, #131316, #1C1C21, #26262C, #2F3037, #393A41, #4B4C52, #5B5C62, #6A6B70);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+    overflow: hidden;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+#title {
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 2px 2px 5px black;
+    text-align: center;
+    color: #e3a864;
+}
+#description {
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 2px 2px 5px black;
+    text-align: center;
+    color: #e3a864;
 }
 
 .drumkit {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    height: 100vh;
-    height: calc(var(--vh, 1vh) * 100);
+    height: 85vh;
 }
 
 .pad {
@@ -15,7 +43,7 @@ body {
     justify-content: center;
     align-items: center; 
     margin: 10px;
-    box-shadow: 0 0 10px #000000;
+    box-shadow: 0 0 10px black;
     flex: 1 0 calc(33.333% - 20px);
     background: radial-gradient(#e3a864, 
     #de9866, #d08367, #af6762);
